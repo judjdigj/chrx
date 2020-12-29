@@ -370,7 +370,7 @@ determine_osv_galliumos()
 
 get_os_version_fedora()
 {
-  release_log_url="http://dl.fedoraproject.org/pub/fedora/linux/releases/"
+  release_log_url="https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/"
   version_list=$(curl -s ${release_log_url} | grep -Eo ">[0-9][0-9]/" | grep -o "[0-9][0-9]")
   CHRX_OS_VERSION=$(echo "${version_list}" | sort | tail -1)
   # default to 25
